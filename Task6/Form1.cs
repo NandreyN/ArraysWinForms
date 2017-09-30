@@ -24,7 +24,11 @@ namespace Task6
             string aText = ArrayA.Text;
             string bText = ArrayB.Text;
 
-            if (string.IsNullOrEmpty(aText) || string.IsNullOrEmpty(bText)) return;
+            if (string.IsNullOrEmpty(aText) || string.IsNullOrEmpty(bText))
+            {
+                MessageBox.Show("Fill in the fields");
+                return;
+            }
             aText.Trim();
             bText.Trim();
 
@@ -34,7 +38,11 @@ namespace Task6
             List<double> aValues = aValuesStr.Select(x => Double.Parse(x)).ToList();
             List<double> bValues = bValuesStr.Select(x => Double.Parse(x)).ToList();
 
-            if (aValues.Count != bValues.Count) return;
+            if (aValues.Count != bValues.Count)
+            {
+                MessageBox.Show("Different size");
+                return;
+            }
             _outputForm.Update(aValues, bValues);
             _outputForm.Show();
         }
