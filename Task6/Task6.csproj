@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="input.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="input.Designer.cs">
+      <DependentUpon>input.cs</DependentUpon>
     </Compile>
     <Compile Include="output.cs">
       <SubType>Form</SubType>
@@ -59,8 +59,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="input.resx">
+      <DependentUpon>input.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="output.resx">
       <DependentUpon>output.cs</DependentUpon>

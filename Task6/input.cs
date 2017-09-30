@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Task6
 {
-    public partial class Form1 : Form
+    public partial class input : Form
     {
         private readonly output _outputForm;
-        public Form1()
+        public input()
         {
             _outputForm = new output();
             InitializeComponent();

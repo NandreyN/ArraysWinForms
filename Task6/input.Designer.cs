@@ -1,6 +1,6 @@
 ﻿namespace Task6
 {
-    partial class Form1
+    partial class input
     {
         /// <summary>
         /// Required designer variable.
@@ -77,7 +77,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Array A";
             // 
-            // Form1
+            // input
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,8 +87,8 @@
             this.Controls.Add(this.Process);
             this.Controls.Add(this.ArrayB);
             this.Controls.Add(this.ArrayA);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "input";
+            this.Text = "input";
             this.ResumeLayout(false);
             this.PerformLayout();
 
