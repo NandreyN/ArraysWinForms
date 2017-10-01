@@ -29,11 +29,11 @@ namespace Task6
                 MessageBox.Show("Fill in the fields");
                 return;
             }
-            aText.Trim();
-            bText.Trim();
+            aText = aText.Trim();
+            bText = bText.Trim();
 
-            List<string> aValuesStr = aText.Split(' ').Where(x => x != " ").ToList();
-            List<string> bValuesStr = bText.Split(' ').Where(x => x != " ").ToList();
+            List<string> aValuesStr = aText.Split(' ').Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
+            List<string> bValuesStr = bText.Split(' ').Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
 
             List<double> aValues = aValuesStr.Select(x => Double.Parse(x)).ToList();
             List<double> bValues = bValuesStr.Select(x => Double.Parse(x)).ToList();
