@@ -37,21 +37,21 @@
             // 
             // ArrayA
             // 
-            this.ArrayA.Location = new System.Drawing.Point(12, 62);
+            this.ArrayA.Location = new System.Drawing.Point(12, 34);
             this.ArrayA.Name = "ArrayA";
-            this.ArrayA.Size = new System.Drawing.Size(176, 20);
+            this.ArrayA.Size = new System.Drawing.Size(924, 20);
             this.ArrayA.TabIndex = 0;
             // 
             // ArrayB
             // 
-            this.ArrayB.Location = new System.Drawing.Point(300, 62);
+            this.ArrayB.Location = new System.Drawing.Point(12, 143);
             this.ArrayB.Name = "ArrayB";
-            this.ArrayB.Size = new System.Drawing.Size(176, 20);
+            this.ArrayB.Size = new System.Drawing.Size(924, 20);
             this.ArrayB.TabIndex = 1;
             // 
             // Process
             // 
-            this.Process.Location = new System.Drawing.Point(207, 59);
+            this.Process.Location = new System.Drawing.Point(431, 212);
             this.Process.Name = "Process";
             this.Process.Size = new System.Drawing.Size(75, 23);
             this.Process.TabIndex = 2;
@@ -62,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 89);
+            this.label1.Location = new System.Drawing.Point(454, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 3;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 89);
+            this.label2.Location = new System.Drawing.Point(454, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 214);
+            this.ClientSize = new System.Drawing.Size(948, 282);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Process);

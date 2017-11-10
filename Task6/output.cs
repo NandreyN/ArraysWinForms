@@ -21,44 +21,43 @@ namespace Task6
             InitializeComponent();
         }
 
-        private Tuple<List<double>, int> CalculateC()
+        private void CalculateC(List<double> c)
         {
-            int counter = 0;
-            var zippedObject = _aData.Zip(_bData, (a, b) => new { AElem = a, BElem = b });
-            List<double> c = new List<double>();
+            int bCounter = 0, aCounter = 0;
+            foreach (int i in Enumerable.Range(1, 20))
+                c.Add(0);
 
-            foreach (var zip in zippedObject)
+            _aData.ForEach(a =>
             {
-                if (zip.AElem >= zip.BElem)
+                bCounter = 0;
+                _bData.ForEach(b =>
                 {
-                    c.Add(zip.AElem);
-                    counter++;
-                }
-                else
-                {
-                    c.Add(zip.BElem);
-                }
-            }
-            return new Tuple<List<double>, int>(c,counter);
+                    if (a == b)
+                        c[aCounter] = a;
+                    bCounter++;
+                });
+                aCounter++;
+            });
         }
 
         private string ListToString(List<double> lst)
         {
             return string.Join(" ", lst.ToArray());
         }
-        private void UpdateForm(string cText)
+        private void UpdateForm(List<double> c)
         {
             OutA.Text = ListToString(_aData);
             OutB.Text = ListToString(_bData);
-            OutC.Text = cText;
+            OutC.Text = ListToString(c);
         }
 
         public void Update(List<double> a, List<double> b)
         {
             _aData = a;
             _bData = b;
-            var ret = CalculateC();
-            UpdateForm(ListToString(ret.Item1) + ", replaced from A = " + ret.Item2.ToString());
+            var c = new List<double>(20);
+            CalculateC(c);
+            UpdateForm(c);
         }
 
         private void OutC_TextChanged(object sender, EventArgs e)

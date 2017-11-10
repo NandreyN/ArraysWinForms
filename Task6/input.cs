@@ -21,6 +21,8 @@ namespace Task6
 
         private void Process_Click(object sender, EventArgs e)
         {
+            // A : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+            // B : 7 4 6 9 22 23 45 44 7 8 9 11 10 5 7 80 0 14 16 33
             string aText = ArrayA.Text;
             string bText = ArrayB.Text;
 
@@ -38,9 +40,9 @@ namespace Task6
             List<double> aValues = aValuesStr.Select(x => Double.Parse(x)).ToList();
             List<double> bValues = bValuesStr.Select(x => Double.Parse(x)).ToList();
 
-            if (aValues.Count != bValues.Count)
+            if (aValues.Count != bValues.Count && aValues.Count != 20)
             {
-                MessageBox.Show("Different size");
+                MessageBox.Show("Check size( == 20)");
                 return;
             }
             _outputForm.Update(aValues, bValues);
