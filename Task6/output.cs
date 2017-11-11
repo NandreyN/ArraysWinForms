@@ -23,20 +23,20 @@ namespace Task6
 
         private void CalculateC(List<double> c)
         {
-            int bCounter = 0, aCounter = 0;
-            foreach (int i in Enumerable.Range(1, 20))
+            int j = 0, i = 0;
+            foreach (int l in Enumerable.Range(1, 20))
                 c.Add(0);
 
             _aData.ForEach(a =>
             {
-                bCounter = 0;
+                j = 0;
                 _bData.ForEach(b =>
                 {
                     if (a == b)
-                        c[aCounter] = a;
-                    bCounter++;
+                        c[i] = a;
+                    j++;
                 });
-                aCounter++;
+                i++;
             });
         }
 
@@ -58,11 +58,6 @@ namespace Task6
             var c = new List<double>(20);
             CalculateC(c);
             UpdateForm(c);
-        }
-
-        private void OutC_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
