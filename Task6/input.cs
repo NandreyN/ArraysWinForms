@@ -12,7 +12,7 @@ namespace Task6
 {
     public partial class input : Form
     {
-        private readonly output _outputForm;
+        private output _outputForm;
         public input()
         {
             _outputForm = new output();
@@ -45,6 +45,8 @@ namespace Task6
                 MessageBox.Show("Check size( == 20)");
                 return;
             }
+
+            _outputForm = new output();
             _outputForm.Update(aValues, bValues);
             _outputForm.Show();
         }
